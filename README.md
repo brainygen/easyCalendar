@@ -55,12 +55,21 @@ easyCalendar это выпадающий календарь для полей в
   - Срабатывает когда календарь инициализировался на странице
 
 ## Методы API
-- **prev_month**
+- **prev_month()**
   - Переключение на предыдущий месяц
-- **next_month**
+- **next_month()**
   - Переключение на следующий месяц
-- **close**
+- **close()**
   - Закрыть окно с выбором даты
+  
+```javascript
+<script type="application/javascript">
+    $(document).ready(function () {
+        var easyCalendar = $('.easyCalendar').easyCalendar();
+        easyCalendar.close();
+    });
+</script>
+```
 
 ## Зависимости
 - [jQuery](https://jquery.com/)
