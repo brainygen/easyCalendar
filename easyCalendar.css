@@ -1,0 +1,109 @@
+.calendar {
+	position:absolute;
+	-moz-user-select:none;
+	-khtml-user-select:none;
+	user-select:none;
+	padding: 20px 20px 10px 20px;
+	border-radius: .1px;
+	box-shadow: 0 0 0 1px rgba(0,0,0,.1), 0 10px 20px -5px rgba(0,0,0,.4);
+	background: #fff;
+}
+.calendar table {
+	border-collapse:collapse;
+}
+.calendar__day {
+	width: 18px;
+	height: 18px;
+	background: #fff;
+	color: #333;
+	text-align: center;
+	text-decoration: none;
+	cursor: pointer;
+	font-size: 13px;
+	line-height: 18px;
+	padding: 5px 4px 4px 4px;
+}
+.calendar__week {
+	width: 18px;
+	height: 18px;
+	background: #fff;
+	color: #333;
+	text-align: center;
+	font-size: 13px;
+	line-height: 18px;
+	padding: 5px;
+}
+.calendar__week-free {
+	color: #d00;
+}
+.calendar__year {
+	background: #fff;
+	color: #333;
+	text-align: center;
+	font-size: 13px;
+}
+.calendar__day-free {
+	color: #d00;
+}
+.calendar__prev {
+	width: 8px;
+	height: 8px;
+	margin: 0 6px;
+	cursor: pointer;
+	background: url(easyCalendar/images/calendar__left.svg);
+}
+.calendar__next {
+	width: 8px;
+	height: 8px;
+	margin: 0 6px;
+	cursor: pointer;
+	background: url(easyCalendar/images/calendar__right.svg);
+}
+.calendar__tail {
+	-webkit-transform: rotate(135deg);
+	-ms-transform: rotate(135deg);
+	transform: rotate(135deg);
+	-webkit-transform-origin: 100% 100%;
+	-ms-transform-origin: 100% 100%;
+	transform-origin: 100% 100%;
+	background: rgba(0,0,0,.1);
+	background: -webkit-gradient(linear,left bottom,right top,color-stop(50%,rgba(0,0,0,.1)),color-stop(50%,rgba(0,0,0,0)));
+	background: -webkit-linear-gradient(bottom left,rgba(0,0,0,.1)50%,rgba(0,0,0,0)50%);
+	background: linear-gradient(to top right,rgba(0,0,0,.1)50%,rgba(0,0,0,0)50%);
+	position: absolute;
+	z-index: 9;
+	display: block;
+	width: 17px;
+	height: 17px;
+	font: 0/0 a;
+	top: -17px;
+	left: 0px;
+}
+.calendar__tail:after {
+	position: absolute;
+	bottom: 1px;
+	left: 1px;
+	width: 17px;
+	height: 17px;
+	content: '';
+	background: #fff;
+}
+.calendar__inited {
+	display: block;
+	visibility: hidden;
+	margin: 0;
+}
+.calendar__show {
+	display: block;
+	visibility: visible;
+}
+.calendar__item-hover {
+	background: #f9f9f9;
+}
+.calendar__item-today {
+	font-weight: 600;
+}
+.calendar__item-current {
+	background: #ffeca6;
+	color: #333;
+}
