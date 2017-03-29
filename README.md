@@ -20,14 +20,11 @@ easyCalendar это выпадающий календарь для полей в
 
 ## Параметры
 - **sep**
-- Разделитель между датой, месяцем, годом (по умолчанию формат 29-03-2017)
+  - Разделитель между датой, месяцем, годом (по умолчанию формат 29-03-2017)
 ```js
-  <script type="application/javascript">
-      $(document).ready(function () {
-          $('.easyCalendar').easyCalendar({
-            sep: '/'
-          });
-      });
+  $('.easyCalendar').easyCalendar({
+    sep: '/'
+  });
   </script>
 ```
 
