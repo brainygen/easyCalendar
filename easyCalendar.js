@@ -1,6 +1,6 @@
 /**
- * EasyCalendar jQuery Plugin
- * Версия - 1.0
+ * EasyCalendar jQuery Plugin https://github.com/brainygen/easyCalendar
+ * Версия - 1.0 
  * 
  * Licensed under the MIT license - http://opensource.org/licenses/MIT
  *
