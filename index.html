@@ -7,18 +7,63 @@
   <meta name="viewport" content="initial-scale=1, minimal-ui" />  
   <link rel="stylesheet" href="easyCalendar.css">
   <style>
+    body {
+      background: #f3f3f3;
+      margin: 0;
+      font: 100%/18px Arial,'Helvetica Neue',Helvetica,yandex-sans-rub-sign,sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+    a {
+      color: #686b6d;
+    }
+    a:hover {
+      color: #775454;
+    }
     .easyCalendar__wrap {
       text-align: center;
-      margin-top: 50px;
+      width: 300px;
+      margin: 100px auto;
+      box-shadow: 0 1px 1px rgba(0,0,0,.1);
+      background: #fff;      
     }
-    .easyCalendar__wrap input {
-         height: 20px;
+    .easyCalndar__header {
+      background: #775454;
+      color: #fff;
+      padding: 15px;
+    }
+    .easyCalndar__header h1 {
+      margin: 0;
+      padding: 0;
+      font-size: 16px;    
+    }
+    .easyCalndar__form {
+      padding: 30px; 
+    }
+    .easyCalendar__form input {
+      height: 20px;
+      border-radius: 1px;
+      border: 1px solid #aaa;
+      padding: 5px;
+      width: 230px;
+    }
+    .easyCalndar_footer {
+      font-size: 14px;
+      background: #f7f7f7;
+      padding: 10px;
     }
   </style>
 </head>
 <body>
-<div class="easyCalendar__wrap">
+ <div class="easyCalendar__wrap">
+  <div class="easyCalndar__header">
+    <h1>EasyCalendar</h1>
+  </div>
+  <div class="easyCalndar__form">
     <input type="text" value="" class="js__easyCalendar">
+  </div>
+  <div class="easyCalndar_footer">
+    <a href="https://github.com/brainygen/easyCalendar">Исходный код на github</a>
+  </div>
 </div>
   
 <script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
