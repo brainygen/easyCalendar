@@ -4,8 +4,8 @@ easyCalendar это выпадающий календарь для полей в
 Вставьте код между тегами head
 ```html
 <head>
-  <link rel="stylesheet" href="easyCalendar.min.css">
-  <script src="easyCalendar.min.js"></script>
+  <link rel="stylesheet" href="easyCalendar.css">
+  <script src="easyCalendar.js"></script>
 </head>
 ```
 
