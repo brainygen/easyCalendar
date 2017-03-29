@@ -17,6 +17,16 @@ easyCalendar это выпадающий календарь для полей в
     });
 </script>
 ```
+- Инициализируем календарь с параметрами
+```javascript
+<script type="application/javascript">
+    $(document).ready(function () {
+        $('.easyCalendar').easyCalendar({
+          'week_name' : ['Mo','Tu','We','Th','Fr','Sa','Su']
+        });
+    });
+</script>
+```
 
 ## Параметры
 - **sep** `[string]`
