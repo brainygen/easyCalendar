@@ -1,6 +1,6 @@
 easyCalendar это выпадающий календарь для полей ввода. Простой и легкий в использовании.
 
-<img src="http://polariton.ad-l.ink/7hhT75zzy/image.png">
+<img src="http://polariton.ad-l.ink/6Z62HJ7ym/image.png">
 
 ## Установка
 Вставьте код между тегами head
