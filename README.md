@@ -1,5 +1,7 @@
 easyCalendar это выпадающий календарь для полей ввода. Простой и легкий в использовании.
 
+Демоверсию можно посмотреть здесь <a href="https://brainygen.github.io/easyCalendar/">https://brainygen.github.io/easyCalendar</a>
+
 <img src="http://polariton.ad-l.ink/6Z62HJ7ym/image.png">
 
 ## Установка
