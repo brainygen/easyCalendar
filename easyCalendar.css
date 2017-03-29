@@ -1,3 +1,11 @@
+/**
+ * EasyCalendar jQuery Plugin https://github.com/brainygen/easyCalendar
+ * Версия - 1.0 
+ * 
+ * Licensed under the MIT license - http://opensource.org/licenses/MIT
+ *
+ * Copyright (c) 2016 Dmitrii Shelik
+ */
 .calendar {
     position:absolute;
     -moz-user-select:none;
