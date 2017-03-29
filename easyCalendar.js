@@ -54,7 +54,7 @@
 			$('.' + easyCalendar.options.prefix).removeClass(easyCalendar.options.prefix + '__show')
 				.removeClass(easyCalendar.options.prefix + '__rendered');
 				
-			$('body').off('click.' + easyCalendar.options.prefix);
+			$('html').off('click.' + easyCalendar.options.prefix);
 			$(window).off('keyup.' + easyCalendar.options.prefix);
 			
 			easyCalendar.options.element = '';
@@ -113,7 +113,7 @@
 				
 			easyCalendar.options.onShow();
 
-			$('body').off('click.' + easyCalendar.options.prefix).on('click.' + easyCalendar.options.prefix, easyCalendar._checkClick);
+			$('html').off('click.' + easyCalendar.options.prefix).on('click.' + easyCalendar.options.prefix, easyCalendar._checkClick);
 			
 			$(window).off('keyup.' + easyCalendar.options.prefix).on('keyup.' + easyCalendar.options.prefix, function (event) {
 			
@@ -323,7 +323,7 @@
 
 			template += '</table></div>';
 			
-			$('body').append(template);
+			$('html').append(template);
 			
 			$('.' + easyCalendar.options.prev_btn_class)
 				.off('click')
