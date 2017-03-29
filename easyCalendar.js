@@ -323,7 +323,7 @@
 
 			template += '</table></div>';
 			
-			$('html').append(template);
+			$('body').append(template);
 			
 			$('.' + easyCalendar.options.prev_btn_class)
 				.off('click')
