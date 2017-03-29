@@ -10,6 +10,7 @@ easyCalendar это выпадающий календарь для полей в
 ```
 
 ## Пример использования
+- Инициализируем календарь без параметров. Всё по умолчанию.
 ```javascript
 <script type="application/javascript">
     $(document).ready(function () {
@@ -18,11 +19,14 @@ easyCalendar это выпадающий календарь для полей в
 </script>
 ```
 - Инициализируем календарь с параметрами
+ - Название дней недели на английском языке
+ - Разделитель у даты /
 ```javascript
 <script type="application/javascript">
     $(document).ready(function () {
         $('.easyCalendar').easyCalendar({
-          'week_name' : ['Mo','Tu','We','Th','Fr','Sa','Su']
+          'week_name' : ['Mo','Tu','We','Th','Fr','Sa','Su'],
+          'sep' : '/'
         });
     });
 </script>
