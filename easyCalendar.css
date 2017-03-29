@@ -9,13 +9,13 @@
     background: #fff;
     display: none;
     visibility: hidden;
-	font-family: arial;
+    font-family: arial;
 }
 .calendar table {
     border-collapse:collapse;
 }
 .calendar__day {
-	width: 18px;
+    width: 18px;
     height: 18px;
     background: #fff;
     color: #333;
