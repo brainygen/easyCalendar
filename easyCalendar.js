@@ -175,11 +175,11 @@
 		 * @params event
 		 */
 		_click: function(e){
-		
+
 			easyCalendar.options.element.value = $(this).attr('data-date');
 			easyCalendar.options.onSelect(easyCalendar.options.element);
 			easyCalendar._close();
-				
+
 		},
 
 		/**
@@ -311,7 +311,7 @@
 		 * Метод инициализации календаря
 		 * @params element, options
 		 */
-		init: function(element, options) {
+		_init: function(element, options) {
 
 			easyCalendar.options = options;
 			
@@ -382,10 +382,22 @@
 		}
 		
 	}
+
+	/**
+	 * Методы API
+	 */
+	var public_methods = {
+	
+		prev_month: easyCalendar._month_prev,
+		next_month: easyCalendar._month_next,
+		close: easyCalendar._close
+	
+	}
 	
 	jQuery.fn.easyCalendar = function(options){
 	
-		return easyCalendar.init(this, $.extend({}, $.fn.easyCalendar.defaults, options, typeof options === 'object' && options));
+		easyCalendar._init(this, $.extend({}, $.fn.easyCalendar.defaults, options, typeof options === 'object' && options));
+		return public_methods;
 		
 	};
 	
@@ -399,9 +411,9 @@
 		'day_state': (new Date).getDate(),
 		'month_state': (new Date).getMonth(),
 		'year_state': (new Date).getFullYear(),
-		'element': null,
+		'element': '',
 		'prev_btn_class' : 'js__calendar-prev',
-		'prev_btn_class' : 'js__calendar-next',
+		'next_btn_class' : 'js__calendar-next',
 		'month_name': ['Январь','Февраль','Март','Апрель','Май','Июнь','Июль','Август','Сентябрь','Октябрь','Ноябрь','Декабрь'],
 		'month_day': ['31','28','31','30','31','30','31','31','30','31','30','31'],
 		'month_day_leap': ['31','29','31','30','31','30','31','31','30','31','30','31'],
