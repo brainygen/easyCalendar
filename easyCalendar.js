@@ -134,26 +134,6 @@
 		},
 
 		/**
-		 * Добавляем class при наведении на дату
-		 * @params event
-		 */
-		_over: function(e){
-		
-			$(this).addClass(easyCalendar.options.prefix + '__item-hover');
-			
-		},
-
-		/**
-		 * Удаляем class при наведении на дату
-		 * @params event
-		 */
-		_out: function(e){
-		
-			$(this).removeClass(easyCalendar.options.prefix + '__item-hover');
-			
-		},
-
-		/**
 		 * При клике на дату
 		 * @params event
 		 */
@@ -200,8 +180,6 @@
 				
 					var get_date = new Date(year, month, (i-start_day));
 
-					day_item.off('mouseover').on('mouseover', easyCalendar._over);
-					day_item.off('mouseout').on('mouseout', easyCalendar._out);
 					day_item.off('click').on('click', easyCalendar._click);
 					
 					if (easyCalendar.options.month == month && easyCalendar.options.day == (i-start_day) && easyCalendar.options.year == year) {
@@ -215,6 +193,7 @@
 					day_item.html(i-start_day);
 					day_item.attr('data-date', easyCalendar._parse_date(i-start_day,month-(-1),year));
 					day_item.css('cursor', 'pointer');
+					day_item.attr('disabled', false);
 					
 				} else {
 				
@@ -229,6 +208,7 @@
 						.off('click')
 						.css('cursor', 'default')
 						.attr('data-date', '')
+						.attr('disabled', true)
 				}
 			}
 
@@ -259,7 +239,33 @@
 			easyCalendar._render(easyCalendar.options.month_state,easyCalendar.options.year_state);
 			
 		},
-
+		
+		/**
+		 * Метод блокирует прокрутку мышки
+		 */
+		_mouse_block: function() {
+			document.onmousewheel = document.onwheel = function(){ 
+				return false;
+			};
+			document.addEventListener("MozMousePixelScroll",function(){return false},false);
+			document.onkeydown = function(e) {
+				if (e.keyCode>=33&&e.keyCode<=40) return false;
+			}
+		},
+		
+		/**
+		 * Метод разблокирует прокрутку мышки
+		 */
+		_mouse_unblock: function() {
+			document.onmousewheel = document.onwheel = function(){ 
+				return true;
+			};
+			document.addEventListener("MozMousePixelScroll",function(){return true},true);
+			document.onkeydown = function(e) {
+				if (e.keyCode>=33&&e.keyCode<=40) return true;
+			}
+		},		
+		
 		/**
 		 * Метод переключения предыдущего месяца
 		 */
@@ -344,6 +350,32 @@
 						return false;
 					}
 			);
+			
+			$('.' + easyCalendar.options.prefix).on('mousewheel', function(e) {
+				
+				e = e || window.event;
+				
+				var delta = e.deltaY || e.detail || e.wheelDelta;
+				
+				if (delta == '-1') {
+					easyCalendar._month_prev();
+				} else {
+					easyCalendar._month_next();
+				}
+				
+			});
+			
+			$(document).on('mousemove', function(e) {
+
+				if ($('.' + easyCalendar.options.prefix)) {
+					if (easyCalendar._isChild(e.target,$('.' + easyCalendar.options.prefix)[0])) {
+						easyCalendar._mouse_block();
+					} else {
+						easyCalendar._mouse_unblock();
+					}
+				}
+			
+			});
 
 			easyCalendar._render(easyCalendar.options.month_state,easyCalendar.options.year_state);
 			
