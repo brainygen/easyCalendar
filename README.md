@@ -16,19 +16,17 @@ easyCalendar это выпадающий календарь для полей в
 ```javascript
 <script type="application/javascript">
     $(document).ready(function () {
-        $('.easyCalendar').easyCalendar();
+        var easyCalendar = $('.easyCalendar').easyCalendar();
     });
 </script>
 ```
 - Инициализируем календарь с другими параметрами
   - Название дней недели на английском языке
-  - Разделитель у даты **-**
 ```javascript
 <script type="application/javascript">
     $(document).ready(function () {
-        $('.easyCalendar').easyCalendar({
-          'week_name' : ['Mo','Tu','We','Th','Fr','Sa','Su'],
-          'sep' : '-'
+        var easyCalendar = $('.easyCalendar').easyCalendar({
+          'week_name' : ['Mo','Tu','We','Th','Fr','Sa','Su']
         });
     });
 </script>
@@ -61,15 +59,6 @@ easyCalendar это выпадающий календарь для полей в
   - Переключение на следующий месяц
 - **close()**
   - Закрыть окно с выбором даты
-  
-```javascript
-<script type="application/javascript">
-    $(document).ready(function () {
-        var easyCalendar = $('.easyCalendar').easyCalendar();
-        easyCalendar.close();
-    });
-</script>
-```
 
 ## Зависимости
 - [jQuery](https://jquery.com/)
