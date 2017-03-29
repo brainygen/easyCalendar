@@ -62,3 +62,6 @@ easyCalendar это выпадающий календарь для полей в
 
 ## Зависимости
 - [jQuery](https://jquery.com/)
+
+## Лицензия
+EasyCalendar is licensed under the MIT license. (http://opensource.org/licenses/MIT)
