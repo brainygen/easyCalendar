@@ -1,4 +1,5 @@
 {
     "name": "brainygen/easycalendar",
-    "description": "EasyCalendar is a drop-down calendar for input fields"
+    "description": "EasyCalendar is a drop-down calendar for input fields",
+    "license": "MIT"
 }
